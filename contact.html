@@ -62,14 +62,14 @@
         </h2>
       </div>
       <div>
-        <form action="mailto:kenryu422@outlook.com?Subject=My%20Comment%20For%20Your%20Website." method="post" enctype="text/plain" name="contactemail">
+        <form action="POST" data-netlify="true" name="contactemail">
           <p>Your Name:</p>
-          <input type="text" name="Name" placeholder="First & Last Name"><br>
+          <input type="text" name="SensingName" placeholder="First & Last Name"><br>
           <p>Your E-mail:</p>
-          <input type="text" name="Mail" placeholder="example@domain.com"><br>
+          <input type="text" name="SensingMail" placeholder="example@domain.com"><br>
           <p>Comment:</p>
-          <textarea name="Comment" cols="50" rows="10" placeholder="Feel free to comment..." id="contactdesk"></textarea>
-          <textarea name="Comment" cols="30" rows="10" placeholder="Feel free to comment..." id="contactmo"></textarea><br><br>
+          <textarea name="SensingComment" cols="50" rows="10" placeholder="Feel free to comment..." id="contactdesk"></textarea>
+          <textarea name="SensingCommentMo" cols="30" rows="10" placeholder="Feel free to comment..." id="contactmo"></textarea><br><br>
           <input type="submit" value="Send" id="sendbut" onclick="thanks()">
         </form>
       </div>
