@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensing Cane: Contact</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="icon" href="https://static.thenounproject.com/png/149638-200.png">
+  <script>
+    function thanks() {
+      let myForm = document.forms["contactemail"].Name.value.toUpperCase();
+      if (myForm == "YIFAN") {
+        alert("懂我的人有多少? 爱我的人有多少? 把我当兄弟的人有多少?")
+      } else {
+        alert("Thank you for your question");
+      }
+    }
+    </script>
+</head>
+
+<body>
+  <div id="indexhead">
+    <h1 class="indexheader">The Sensing Cane</h1>
+    <div id="dropnav">
+      <button onclick="dropnavi()" class="dropbut">&equiv;</button>
+      <button onclick="dropnavimo()" class="dropbutmo">&equiv;</button>
+    </div>
+    <div id="dropmenumo" class="droplinkmo">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="manual.html">Manual</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="manual.html">Manual</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div id="dropmenu" class="droplink">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="manual.html">Manual</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="content">
+    <h2 class="indextitle">Contact</h2>
+    <h2 class="indextitlemo">Contact</h2>
+    <div id="contactpage">
+      <div>
+        <h1>If you have any questions or concerns contact us:</h1>
+        <h2>
+          <i class="fas fa-envelope"></i>
+          Email:
+          <br><br>
+          1. jjpayne0202@gmail.com
+          <br><br>
+          2. kenryu422@outlook.com
+        </h2>
+      </div>
+      <div>
+        <form action="mailto:kenryu422@outlook.com?Subject=My%20Comment%20For%20Your%20Website." method="post" enctype="text/plain" name="contactemail">
+          <p>Your Name:</p>
+          <input type="text" name="Name" placeholder="First & Last Name"><br>
+          <p>Your E-mail:</p>
+          <input type="text" name="Mail" placeholder="example@domain.com"><br>
+          <p>Comment:</p>
+          <textarea name="Comment" cols="50" rows="10" placeholder="Feel free to comment..." id="contactdesk"></textarea>
+          <textarea name="Comment" cols="30" rows="10" placeholder="Feel free to comment..." id="contactmo"></textarea><br><br>
+          <input type="submit" value="Send" id="sendbut" onclick="thanks()">
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="footrow">
+    <ul>
+      <li>
+        <p>Company:</p>
+      </li>
+      <li>
+        <p>CART&trade;</p>
+      </li>
+      <li><a href="http://cart.org/">Company Link</a></li>
+    </ul>
+    <ul>
+      <li>
+        <p>Creator:</p>
+      </li>
+      <li>
+        <p>Joseph Payne</p>
+      </li>
+      <li>
+        <p>Yifan Yu</p>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </footer>
+</body>
+<script>
+  window.onscroll = function() {
+    stickynavi()
+  };
+  var nav = document.getElementById("indexhead");
+  var stick = nav.offsetTop;
+
+  function stickynavi() {
+    if (window.pageYOffset >= stick) {
+      nav.classList.add("stickynav")
+    } else {
+      nav.classList.remove("stickynav");
+    }
+  }
+
+  function dropnavi() {
+    document.getElementById('dropmenu').classList.toggle('show');
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbut')) {
+      var dropdown = document.getElementsByClassName('droplink');
+      var i;
+      for (i = 0; i < dropdown.length; i++) {
+        var openDropdown = dropdown[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  function dropnavimo() {
+    document.getElementById('dropmenumo').classList.toggle('show');
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbutmo')) {
+      var dropdown = document.getElementsByClassName('droplinkmo');
+      var i;
+      for (i = 0; i < dropdown.length; i++) {
+        var openDropdown = dropdown[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+
+</html>

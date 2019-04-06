@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensing Cane: Manual</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="icon" href="https://static.thenounproject.com/png/149638-200.png">
+</head>
+
+<body>
+  <div id="indexhead">
+    <h1 class="indexheader">The Sensing Cane</h1>
+    <div id="dropnav">
+      <button onclick="dropnavi()" class="dropbut">&equiv;</button>
+      <button onclick="dropnavimo()" class="dropbutmo">&equiv;</button>
+    </div>
+    <div id="dropmenumo" class="droplinkmo">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="manual.html">Manual</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="manual.html">Manual</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div id="dropmenu" class="droplink">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="manual.html">Manual</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="content">
+    <h2 class="indextitle">Manual</h2>
+    <h2 class="indextitlemo">Manual</h2>
+    <h3 class="indexdes">This product is an assistance device for the blind. Whether you are the end user, or gifting it to them, you should take the time to understand the product properly. This includes, but is not limited to, usability, ease of access, product specifications, charging, ect. This manual will instruct you on this subject.</h3>
+    <div id="manualul">
+      <div class="manualli"><button class="extentbox">Usage</button>
+        <div class="extentcontent">
+          <p>This product is an assistant to the blind. It is meant to be used in replacement of a common white cane. First you should learn audio cues. The included glasses are used for many purposes. They protect against UV light, so no need to wear an extra pair. The attached earbuds will be your main proprietor of information while using the Sensing Cane. These earbuds are designed to allow exterior sound through Instruction will come in a few ways. First is a series of audible beeps. If your sensor has indicated there is something approaching you, it will notify you through beeping in one ear. Follow the sound of the beep to avoid collision. The attached sensors will monitor the area around you to figure out if there is anything on either side you can run into. If more instruction is needed, such as on a crowded street, your assistant program will give precise directions. These will include the following phrases. "Slow Down." "Speed up." "Slight Left." Slight Right." "Hard Left." "Hard Right." "Turn Left." "Turn Right." "Duck Down." These may be used in rapid succession, so be prepared to have to move quickly on a busy street. The AI program is always trying to find the best route. This feature can be turned off.</p>
+        </div>
+      </div>
+      <div class="manualli"><button class="extentbox">AI Assistant</button>
+        <div class="extentcontent">
+          <p>The included AI assistant is essentially a basic version of Google Assistant. It can be used to surf the web, but only when connected to wifi. Wifi connection requires external bluetooth device for connecting and initial setup. This is optional however, and the offline version still has eSim, giving it gps, maps, and directions as stated in the Usage paragraph. If you are in a situation without any service or wifi, the AI will close down to its most basic functions, these being Close navigation, Crosswalk detection, and a basic map. <U> Keep in mind</U>; the maps on the device itself may become outdated over time, it is highly recommended you connect to wifi on occasion to prevent this. The Assistant also has an in built "Learning Program". This allows it to learn how foot traffic in your area works, the routes you take every day, how fast you normally walk, ect. This is used for your best interest, in order to allow it to avoid more collisions and make your daily commute safer. Keep in mind, all functionality can be disabled if required. Simply say "settings" while using the cane and you will be walked through altering settings. Some additional commands to note are: "Time": Returns the current time, "Date": Gives current date, can be configured in settings to read Day/Month/Year ect., "Locate": Activates Cane's calling function.</p>
+        </div>
+      </div>
+      <div class="manualli"><button class="extentbox">Battery Recharging</button>
+        <div class="extentcontent">
+          <p>Also included with your cane is the charging dock. This has been designed with ease of use in mind. While both the Glasses and Cane have been designed to have solar panels for longer lasting battery life, as well as multiple Lithium Ion Batteries, it is still recommended that you charge overnight for maximum power and efficiency. The dock is designed for extreme ease of use, as both have wireless charging. This raised the price, but it should be worthwhile for the ease of use. Simply place the cane in the funnel-shaped dock and if it buzzes twice, it is charging. It will beep once at full charge, (20 hours battery life). The glasses can be placed on their included dock as well. They will emit an audible beep when plugged in and when finished charging. It is highly recommended someone assist with plugging in both docks.</p>
+        </div>
+      </div>
+    </div>
+    <div id="directtofaq">
+      <h3 class="indexdes">For more question, please turn to FAQ page.</h3>
+      <div class="savior"><a href="faq.html" class="buylink">Click here for redirect.</a><a href="faq.html" class="buylinkmobile">Click for redirect.</a></div>
+    </div>
+  </div>
+  <footer class="footrow">
+    <ul>
+      <li>
+        <p>Company:</p>
+      </li>
+      <li>
+        <p>CART&trade;</p>
+      </li>
+      <li><a href="http://cart.org/">Company Link</a></li>
+    </ul>
+    <ul>
+      <li>
+        <p>Creator:</p>
+      </li>
+      <li>
+        <p>Joseph Payne</p>
+      </li>
+      <li>
+        <p>Yifan Yu</p>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </footer>
+</body>
+<script>
+  window.onscroll = function() {
+    stickynavi()
+  };
+  var nav = document.getElementById("indexhead");
+  var stick = nav.offsetTop;
+
+  function stickynavi() {
+    if (window.pageYOffset >= stick) {
+      nav.classList.add("stickynav")
+    } else {
+      nav.classList.remove("stickynav");
+    }
+  }
+  var extent = document.getElementsByClassName("extentbox");
+  var i;
+  for (i = 0; i < extent.length; i++) {
+    extent[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+  function dropnavi() {
+    document.getElementById('dropmenu').classList.toggle('show');
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbut')) {
+      var dropdown = document.getElementsByClassName('droplink');
+      var i;
+      for (i = 0; i < dropdown.length; i++) {
+        var openDropdown = dropdown[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  function dropnavimo() {
+    document.getElementById('dropmenumo').classList.toggle('show');
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbutmo')) {
+      var dropdown = document.getElementsByClassName('droplinkmo');
+      var i;
+      for (i = 0; i < dropdown.length; i++) {
+        var openDropdown = dropdown[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+</script>
+
+</html>

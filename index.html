@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensing Cane</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="icon" href="https://static.thenounproject.com/png/149638-200.png">
+  <style>
+    @keyframes pushin {
+      from {
+        top: 5em;
+        opacity: 0;
+      }
+
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="indexhead">
+    <h1 class="indexheader">The Sensing Cane</h1>
+    <div id="dropnav">
+      <button onclick="dropnavi()" class="dropbut">&equiv;</button>
+      <button onclick="dropnavimo()" class="dropbutmo">&equiv;</button>
+    </div>
+    <div id="dropmenumo" class="droplinkmo">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="manual.html">Manual</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="manual.html">Manual</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div id="dropmenu" class="droplink">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="manual.html">Manual</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="content">
+    <h2 class="indextitle">Beginner Bundle start from $49</h2>
+    <h2 class="indextitlemo">Beginner Cane Bundle</h2>
+    <h3 class="indexdes">Buy the Sensing Cane from CART&trade;. Proximity sensor built-in, GPS and lost phone detection, Google Assistant voice control, Traffic light recognition. Help your love one get from place to place safely. Pre-order now from
+      $49.</h3>
+    <div class="savior"><a href="" target="_blank" class="buylink">Buy Beginner Bundle Now ></a><a href="" target="_blank" class="buylinkmobile">Buy Now ></a></div>
+    <img src="img/e469fc57349465.59e1a27a996e8.jpg" alt="Smart Cane" id="begincane">
+    <br>
+    <h2 class="indextitle">Dual Cane Bundle start from $89</h2>
+    <h2 class="indextitlemo">Dual Cane Bundle</h2>
+    <h3 class="indexdes">Enjoy the benefit from CART&trade; product, get the best navigation built into your new high tech blind cane. Gift them to people you love, protecting them with our latest technology and get a discount for buying two Sensing
+      Canes.</h3>
+    <div class="savior"><a href="" target="_blank" class="buylink">Buy Dual Cane Bundle Now ></a><a href="" target="_blank" class="buylinkmobile">Buy Now ></a></div>
+    <img src="img/1ce89457349465.59e1a3005f5cd.jpg" alt="dual cane" id="dualcane">
+  </div>
+  <footer class="footrow">
+    <ul>
+      <li>
+        <p>Company:</p>
+      </li>
+      <li>
+        <p>CART&trade;</p>
+      </li>
+      <li><a href="http://cart.org/">Company Link</a></li>
+    </ul>
+    <ul>
+      <li>
+        <p>Creator:</p>
+      </li>
+      <li>
+        <p>Joseph Payne</p>
+      </li>
+      <li>
+        <p>Yifan Yu</p>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </footer>
+</body>
+<script>
+  window.onscroll = function() {
+    stickynavi()
+  };
+  var nav = document.getElementById("indexhead");
+  var stick = nav.offsetTop;
+
+  function stickynavi() {
+    if (window.pageYOffset >= stick) {
+      nav.classList.add("stickynav")
+    } else {
+      nav.classList.remove("stickynav");
+    }
+  }
+
+  function dropnavi() {
+    document.getElementById('dropmenu').classList.toggle('show');
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbut')) {
+      var dropdown = document.getElementsByClassName('droplink');
+      var i;
+      for (i = 0; i < dropdown.length; i++) {
+        var openDropdown = dropdown[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  function dropnavimo() {
+    document.getElementById('dropmenumo').classList.toggle('show');
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbutmo')) {
+      var dropdown = document.getElementsByClassName('droplinkmo');
+      var i;
+      for (i = 0; i < dropdown.length; i++) {
+        var openDropdown = dropdown[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+
+</html>

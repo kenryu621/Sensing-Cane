@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensing Cane: FAQ</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="icon" href="https://static.thenounproject.com/png/149638-200.png">
+</head>
+
+<body>
+  <div id="indexhead">
+    <h1 class="indexheader">The Sensing Cane</h1>
+    <div id="dropnav">
+      <button onclick="dropnavi()" class="dropbut">&equiv;</button>
+      <button onclick="dropnavimo()" class="dropbutmo">&equiv;</button>
+    </div>
+    <div id="dropmenumo" class="droplinkmo">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="manual.html">Manual</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="manual.html">Manual</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div id="dropmenu" class="droplink">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="manual.html">Manual</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="content">
+    <h2 class="indextitle">FAQ</h2>
+    <h2 class="indextitlemo">FAQ</h2>
+    <h3 class="indexdes">Answers to frequently asked questions about our Sensing Cane.</h3>
+    <div id="faqul">
+      <div class="faqq">
+        <h2>How does the Sensing Cane connect to the internet?</h2>
+        <p> We want our products able to function proper independently, all of our products have built-in Bluetooth, and eSIM connection. Since this product is being sold for blind people, we are offering eSIM plan for free. Also, our AI assistant has built-in offline features such as offline crosswalk detection, and offline map for navigating without signal.</p>
+      </div>
+      <div class="faqq">
+        <h2>What if my Sensing Cane has been misplaced?</h2>
+        <p>The included glasses are linked to the Sensing Cane 24/7, and will start vibrating once the person start walking without the Sensing Cane in hand. The vibration will indicate the direction of the Sensing Cane makes our customers easier to find it. The cane will also begin to vibrate, making enough noise for quick location.</p>
+      </div>
+      <div class="faqq">
+        <h2>Are the included glasses UV protective?</h2>
+        <p>Yes. They are meant to not only be an accessory to the main device, but also be practical and protective.</p>
+      </div>
+      <div class="faqq">
+        <h2>Hearing is an important sense for the blind, will the included earbuds be too much of a distraction? </h2>
+        <p>While it is important to alway keep your mind on where you are going, and whats around you, the included earbuds are designed to allow a high amount of sound in, essentially the opposite of noise cancelling. You should be able to clearly hear the world around you, and any instructions from the device. </p>
+      </div>
+      <div class="faqq">
+        <h2>How does charging work?</h2>
+        <p>Please see the "Battery Recharging" section of the manual page. To put it simply, wireless charging. You simply place it in the included station, and the glasses on their dock, and both will notify you of if you are finished.</p>
+      </div>
+      <div class="faqq">
+        <h2>"AI" is a very loose term, what exactly does the software do?</h2>
+        <p>The included assistant has one primary function, get you from A to B as quickly and efficiently as possible. It will do this by remembering what streets you have been on, how fast you walk, how large foot traffic usually is, ect. Nothing is done without your permission, but it will alway try to avoid collisions more efficiently. It also has google assistant built in.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="footrow">
+    <ul>
+      <li>
+        <p>Company:</p>
+      </li>
+      <li>
+        <p>CART&trade;</p>
+      </li>
+      <li><a href="http://cart.org/">Company Link</a></li>
+    </ul>
+    <ul>
+      <li>
+        <p>Creator:</p>
+      </li>
+      <li>
+        <p>Joseph Payne</p>
+      </li>
+      <li>
+        <p>Yifan Yu</p>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </footer>
+</body>
+<script>
+  window.onscroll = function() {
+    stickynavi()
+  };
+  var nav = document.getElementById("indexhead");
+  var stick = nav.offsetTop;
+
+  function stickynavi() {
+    if (window.pageYOffset >= stick) {
+      nav.classList.add("stickynav")
+    } else {
+      nav.classList.remove("stickynav");
+    }
+  }
+
+  function dropnavi() {
+    document.getElementById('dropmenu').classList.toggle('show');
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbut')) {
+      var dropdown = document.getElementsByClassName('droplink');
+      var i;
+      for (i = 0; i < dropdown.length; i++) {
+        var openDropdown = dropdown[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  function dropnavimo() {
+    document.getElementById('dropmenumo').classList.toggle('show');
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbutmo')) {
+      var dropdown = document.getElementsByClassName('droplinkmo');
+      var i;
+      for (i = 0; i < dropdown.length; i++) {
+        var openDropdown = dropdown[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+</script>
+
+</html>
